@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be My Valentine? 💖</title>
+  <meta name="description" content="A special romantic question for a special someone!">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Floating background particles/hearts -->
+  <div class="hearts-container" id="heartsContainer"></div>
+
+  <!-- Main Card Container -->
+  <main class="card-container">
+    <div class="card glass">
+      <!-- Animated Cute SVG Hero Illustration -->
+      <div class="hero-image-wrapper">
+        <svg class="valentine-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ff4b72" />
+              <stop offset="100%" stop-color="#ff2a55" />
+            </linearGradient>
+            <linearGradient id="bearGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f7d6bd" />
+              <stop offset="100%" stop-color="#e2b490" />
+            </linearGradient>
+            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+
+          <!-- Cute Bear Character -->
+          <!-- Ears -->
+          <circle cx="65" cy="60" r="18" fill="#e2b490" />
+          <circle cx="65" cy="60" r="10" fill="#fce5d8" />
+          <circle cx="135" cy="60" r="18" fill="#e2b490" />
+          <circle cx="135" cy="60" r="10" fill="#fce5d8" />
+          <!-- Head -->
+          <circle cx="100" cy="85" r="45" fill="url(#bearGrad)" filter="url(#glow)"/>
+          <!-- Snout -->
+          <ellipse cx="100" cy="95" rx="16" ry="12" fill="#fff" />
+          <ellipse cx="100" cy="90" rx="6" ry="4" fill="#5c3d2e" />
+          <!-- Eyes -->
+          <ellipse class="eye eye-left" cx="80" cy="80" rx="4" ry="6" fill="#332219" />
+          <ellipse class="eye eye-right" cx="120" cy="80" rx="4" ry="6" fill="#332219" />
+          <!-- Eye Catchlights -->
+          <circle cx="78" cy="78" r="1.5" fill="#fff" />
+          <circle cx="118" cy="78" r="1.5" fill="#fff" />
+          <!-- Cheeks -->
+          <ellipse cx="70" cy="92" rx="7" ry="4" fill="#ff9ebb" opacity="0.7" />
+          <ellipse cx="130" cy="92" rx="7" ry="4" fill="#ff9ebb" opacity="0.7" />
+          <!-- Happy Smile -->
+          <path d="M 94 96 Q 100 102 106 96" stroke="#5c3d2e" stroke-width="2.5" fill="none" stroke-linecap="round" />
+
+          <!-- Pulsing Heart in Paws -->
+          <g class="animated-heart">
+            <path d="M 100 120 C 100 120 70 90 70 112 C 70 126 86 138 100 150 C 114 138 130 126 130 112 C 130 90 100 120 100 120 Z" 
+                  fill="url(#heartGrad)" filter="url(#glow)"/>
+          </g>
+          <!-- Bear Paws -->
+          <circle cx="75" cy="130" r="10" fill="#e2b490" />
+          <circle cx="125" cy="130" r="10" fill="#e2b490" />
+        </svg>
+      </div>
+
+      <h1 class="title">Will you be my Valentine? 💕</h1>
+      <p class="subtitle" id="subtitleText">Please say yes! My heart is waiting... 🥺</p>
+
+      <!-- Action Buttons -->
+      <div class="buttons-wrapper" id="buttonsWrapper">
+        <button id="yesBtn" class="btn btn-yes">
+          <span class="btn-text">Yes! 🥰</span>
+          <span class="btn-sparkle">✨</span>
+        </button>
+
+        <button id="noBtn" class="btn btn-no">
+          <span id="noBtnText">No 😢</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
